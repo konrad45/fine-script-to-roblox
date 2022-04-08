@@ -1,32 +1,138 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local textlabelka = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local s16 = Instance.new("TextButton")
+local s100 = Instance.new("TextButton")
+local j100 = Instance.new("TextButton")
+local j16 = Instance.new("TextButton")
 
-# Precompiled Headers
-*.gch
-*.pch
+--Properties:
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-# Fortran module files
-*.mod
-*.smod
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+main.Position = UDim2.new(0.302424252, 0, 0.298653632, 0)
+main.Size = UDim2.new(0, 689, 0, 520)
+main.Active = true
+main.Draggable = true
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+textlabelka.Name = "textlabelka"
+textlabelka.Parent = main
+textlabelka.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textlabelka.BackgroundTransparency = 1.000
+textlabelka.Size = UDim2.new(0, 689, 0, 50)
+textlabelka.Font = Enum.Font.SourceSans
+textlabelka.Text = "WELCOME in unnormal script"
+textlabelka.TextColor3 = Color3.fromRGB(162, 18, 18)
+textlabelka.TextScaled = true
+textlabelka.TextSize = 14.000
+textlabelka.TextWrapped = true
 
-# Executables
-*.exe
-*.out
-*.app
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.927431047, 0, 0, 0)
+close.Size = UDim2.new(0, 50, 0, 50)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+
+s16.Name = "s16"
+s16.Parent = main
+s16.BackgroundColor3 = Color3.fromRGB(82, 66, 206)
+s16.Position = UDim2.new(0.0725689381, 0, 0.253846169, 0)
+s16.Size = UDim2.new(0, 200, 0, 50)
+s16.Font = Enum.Font.SourceSansBold
+s16.Text = "set normal speed"
+s16.TextColor3 = Color3.fromRGB(0, 0, 0)
+s16.TextScaled = true
+s16.TextSize = 14.000
+s16.TextWrapped = true
+
+s100.Name = "s100"
+s100.Parent = main
+s100.BackgroundColor3 = Color3.fromRGB(82, 66, 206)
+s100.Position = UDim2.new(0.637155294, 0, 0.253846169, 0)
+s100.Size = UDim2.new(0, 200, 0, 50)
+s100.Font = Enum.Font.SourceSansBold
+s100.Text = "set speed 100"
+s100.TextColor3 = Color3.fromRGB(0, 0, 0)
+s100.TextScaled = true
+s100.TextSize = 14.000
+s100.TextWrapped = true
+
+j100.Name = "j100"
+j100.Parent = main
+j100.BackgroundColor3 = Color3.fromRGB(82, 66, 206)
+j100.Position = UDim2.new(0.637155294, 0, 0.740384638, 0)
+j100.Size = UDim2.new(0, 200, 0, 50)
+j100.Font = Enum.Font.SourceSansBold
+j100.Text = "set jumppower 100"
+j100.TextColor3 = Color3.fromRGB(0, 0, 0)
+j100.TextScaled = true
+j100.TextSize = 14.000
+j100.TextWrapped = true
+
+j16.Name = "j16"
+j16.Parent = main
+j16.BackgroundColor3 = Color3.fromRGB(82, 66, 206)
+j16.Position = UDim2.new(0.0725689381, 0, 0.740384638, 0)
+j16.Size = UDim2.new(0, 200, 0, 50)
+j16.Font = Enum.Font.SourceSansBold
+j16.Text = "set normal jumppower"
+j16.TextColor3 = Color3.fromRGB(0, 0, 0)
+j16.TextScaled = true
+j16.TextSize = 14.000
+j16.TextWrapped = true
+
+-- Scripts:
+
+local function GZNNDBD_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(GZNNDBD_fake_script)()
+local function RBTXZSG_fake_script() -- s16.setSpeed16 
+	local script = Instance.new('LocalScript', s16)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	end)
+end
+coroutine.wrap(RBTXZSG_fake_script)()
+local function GXAJCR_fake_script() -- s100.setSpeed100 
+	local script = Instance.new('LocalScript', s100)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	end)
+end
+coroutine.wrap(GXAJCR_fake_script)()
+local function GFCY_fake_script() -- j100.setJumppower100 
+	local script = Instance.new('LocalScript', j100)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+	end)
+end
+coroutine.wrap(GFCY_fake_script)()
+local function IVLA_fake_script() -- j16.setJumppower16 
+	local script = Instance.new('LocalScript', j16)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+	end)
+end
+coroutine.wrap(IVLA_fake_script)()
